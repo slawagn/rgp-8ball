@@ -7,14 +7,14 @@ greetings, answers =
         "#{filename}.txt"
       ),
       chomp: true
-    ).reject { |line| line.empty? }
+    ).reject(&:empty?)
   end
 
 delay = rand(1.5..2.5)
 
 puts greetings.sample
 
-sleep delay
+sleep(delay)
 
 puts
 puts answers.sample
